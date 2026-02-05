@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Grafo">
+<circle cx="18" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="46" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="48" cy="44" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="16" cy="46" r="5" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M22 20l19-3M20 24l24 17M18 25l-1 16M21 46l22-2M46 21l1 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg>

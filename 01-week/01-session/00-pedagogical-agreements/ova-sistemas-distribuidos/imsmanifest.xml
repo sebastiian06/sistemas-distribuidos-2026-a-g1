@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="OVA-EDATOS" version="1.2"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+    http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="ORG-OVA">
+    <organization identifier="ORG-OVA">
+      <title>OVA · Sistemas Distribuidos · CORHUILA</title>
+      <item identifier="ITEM-OVA" identifierref="RES-OVA">
+        <title>OVA Interactivo</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-OVA" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="src/css/styles.css"/>
+      <file href="src/js/app.js"/>
+      <file href="src/js/lib/tiny.js"/>
+      <!-- Puedes agregar aquí más archivos si es necesario -->
+    </resource>
+  </resources>
+</manifest>

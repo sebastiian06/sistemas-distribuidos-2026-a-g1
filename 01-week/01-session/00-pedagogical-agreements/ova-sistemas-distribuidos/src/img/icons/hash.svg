@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tabla hash">
+<rect x="10" y="14" width="44" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M22 14v36M34 14v36M10 26h44M10 38h44" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<path d="M15 20h4M15 32h4M15 44h4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OVA - Sistemas Distribuidos (Ingeniería de Sistemas, CORHUILA). Ruta de aprendizaje interactiva de 16 semanas con actividades, recursos y evaluación gamificada." />
+  <meta name="theme-color" content="#00A050" />
+  <title>OVA · Sistemas Distribuidos · CORHUILA</title>
+
+  <link rel="preload" href="src/css/styles.css" as="style" />
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <link rel="icon" href="src/img/icons/hash.svg" type="image/svg+xml" />
+</head>
+
+<body>
+  <a class="skiplink" href="#contenido">Saltar al contenido</a>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header class="topbar" role="banner">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <img class="brand__logo" src="src/img/corhuila-logo.png" alt="Logo CORHUILA" width="56" height="48" loading="eager" />
+        <div class="brand__txt">
+          <div class="brand__kicker">Corporación Universitaria del Huila</div>
+          <div class="brand__name">OVA · Sistemas Distribuidos</div>
+        </div>
+      </div>
+
+
+
+      <button class="btn btn--ghost topbar__menu" type="button" id="btnMenu" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menú de navegación">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+        <span>Menú</span>
+      </button>
+    </div>
+
+    <div class="menu-mobile" id="menuMobile" hidden>
+      <div class="container menu-mobile__inner">
+        <a href="#overview">Inicio</a>
+        <a href="#justificacion">Justificación</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#ruta">Ruta</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#evaluacion">Evaluación</a>
+        <a href="#recursos">Recursos</a>
+      </div>
+    </div>
+
+    <div class="scrollbar" aria-hidden="true">
+      <div class="scrollbar__fill" id="scrollFill"></div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="contenido" class="main">
+
+    <!-- TABS PRINCIPALES GAMIFICADAS -->
+    <nav class="main-tabs" role="tablist" aria-label="Navegación OVA">
+      <button class="main-tab is-active" id="tab-ini" role="tab" aria-selected="true" aria-controls="panel-ini" tabindex="0" data-tab="ini">
+        <span class="main-tab__icon"><img src="src/img/icons/hash.svg" alt="" width="20" height="20"></span>
+        <span>Inicio</span>
+      </button>
+      <button class="main-tab" id="tab-just" role="tab" aria-selected="false" aria-controls="panel-just" tabindex="-1" data-tab="just">
+        <span class="main-tab__icon"><img src="src/img/icons/tree.svg" alt="" width="20" height="20"></span>
+        <span>Justificación</span>
+      </button>
+      <button class="main-tab" id="tab-obj" role="tab" aria-selected="false" aria-controls="panel-obj" tabindex="-1" data-tab="obj">
+        <span class="main-tab__icon"><img src="src/img/icons/array.svg" alt="" width="20" height="20"></span>
+        <span>Objetivos</span>
+      </button>
+      <button class="main-tab" id="tab-ruta" role="tab" aria-selected="false" aria-controls="panel-ruta" tabindex="-1" data-tab="ruta">
+        <span class="main-tab__icon"><img src="src/img/icons/linkedlist.svg" alt="" width="20" height="20"></span>
+        <span>Ruta</span>
+        <span class="main-tab__badge" id="badgeTabRuta" title="Insignias">🏅</span>
+      </button>
+
+      <button class="main-tab" id="tab-eval" role="tab" aria-selected="false" aria-controls="panel-eval" tabindex="-1" data-tab="eval">
+        <span class="main-tab__icon"><img src="src/img/icons/graph.svg" alt="" width="20" height="20"></span>
+        <span>Evaluación</span>
+      </button>
+      <button class="main-tab" id="tab-rec" role="tab" aria-selected="false" aria-controls="panel-rec" tabindex="-1" data-tab="rec">
+        <span class="main-tab__icon"><img src="src/img/icons/hash.svg" alt="" width="20" height="20"></span>
+        <span>Recursos</span>
+      </button>
+    </nav>
+
+    <!-- PANEL: INICIO -->
+    <section class="main-tab-panel" id="panel-ini" role="tabpanel" aria-labelledby="tab-ini">
+      <!-- HERO SECTION -->
+      <section class="hero" id="overview" aria-labelledby="heroTitle">
+        <div class="hero__bg" aria-hidden="true">
+          <img src="src/img/patterns/grid.svg" alt="" width="1200" height="260" />
+        </div>
+        <div class="container hero__inner">
+          <div class="hero__left">
+            <p class="pill">Ingeniería de Sistemas · Presencial · VII Semestre</p>
+            <h1 id="heroTitle">Sistemas Distribuidos</h1>
+            <p class="lead">
+              Comprende los principios, arquitecturas y tecnologías de los sistemas distribuidos para diseñar aplicaciones escalables y tolerantes a fallos. 
+              Esta OVA te guía paso a paso con actividades prácticas, recursos y evaluación continua.
+            </p>
+
+            <div class="meta-grid" role="list" aria-label="Información del curso">
+              <div class="meta" role="listitem">
+                <span class="meta__k">Código</span>
+                <span class="meta__v">84719</span>
+              </div>
+              <div class="meta" role="listitem">
+                <span class="meta__k">Créditos</span>
+                <span class="meta__v">3</span>
+              </div>
+              <div class="meta" role="listitem">
+                <span class="meta__k">Acompañamiento</span>
+                <span class="meta__v">48 h</span>
+              </div>
+              <div class="meta" role="listitem">
+                <span class="meta__k">Trabajo Autónomo</span>
+                <span class="meta__v">96 h</span>
+              </div>
+              <div class="meta" role="listitem">
+                <span class="meta__k">Total</span>
+                <span class="meta__v">144 h</span>
+              </div>
+              <div class="meta" role="listitem">
+                <span class="meta__k">Metodología</span>
+                <span class="meta__v">Teórico-Práctico</span>
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn--primary" href="#ruta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Iniciar ruta
+              </a>
+              <button class="btn btn--soft" type="button" id="btnReset" aria-label="Reiniciar todo el progreso del curso">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M1 4v6h6M23 20v-6h-6"/>
+                  <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/>
+                </svg>
+                Reiniciar progreso
+              </button>
+            </div>
+
+            <div class="progress-card" aria-label="Progreso del curso">
+              <div class="progress__top">
+                <span class="progress__label">Tu progreso</span>
+                <span class="progress__value" id="progressTxt">0%</span>
+              </div>
+              <div class="progress__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Porcentaje de semanas completadas">
+                <div class="progress__fill" id="progressFill"></div>
+              </div>
+              <div class="progress__stats" id="progressStats">0 de 16 semanas completadas</div>
+            </div>
+          </div>
+          <!-- Se eliminó el encabezado institucional duplicado del hero -->
+        </div>
+    </section>
+
+    </section>
+
+    <!-- PANEL: JUSTIFICACIÓN -->
+    <section class="main-tab-panel" id="panel-just" role="tabpanel" aria-labelledby="tab-just" hidden>
+      <section class="section" id="justificacion" aria-labelledby="justTitle">
+      <div class="container">
+        <div class="section__hd">
+          <h2 id="justTitle">Justificación</h2>
+          <p class="muted">Por qué esta asignatura es fundamental en tu formación como ingeniero de sistemas.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Contexto</h3>
+            <p class="card__sub">
+              Los sistemas distribuidos son la base de la infraestructura tecnológica moderna: servicios en la nube, 
+              redes sociales, sistemas de comercio electrónico y aplicaciones móviles dependen de arquitecturas distribuidas. 
+              La capacidad de diseñar sistemas que operen de manera coordinada a través de múltiples nodos es fundamental 
+              en la era digital.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Relevancia</h3>
+            <p class="card__sub">
+              Comprender los mecanismos de comunicación, sincronización, consistencia y tolerancia a fallos permite al 
+              ingeniero de sistemas diseñar aplicaciones escalables, disponibles y resilientes. Estos conceptos son 
+              esenciales para enfrentar los desafíos de la computación distribuida en entornos reales.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout callout--raa">
+          <div class="callout__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="callout__body">
+            <strong>Resultado de Aprendizaje de Asignatura (RAA):</strong><br/>
+            Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, 
+            sincronización, consistencia y tolerancia a fallos para construir aplicaciones escalables y robustas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+    <!-- PANEL: OBJETIVOS -->
+    <section class="main-tab-panel" id="panel-obj" role="tabpanel" aria-labelledby="tab-obj" hidden>
+      <section class="section section--alt" id="objetivos" aria-labelledby="objTitle">
+      <div class="container">
+        <div class="section__hd">
+          <h2 id="objTitle">Objetivos</h2>
+          <p class="muted">Claridad de propósito: qué vas a lograr al finalizar este curso.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card card--highlight">
+            <div class="card__badge">General</div>
+            <h3 class="card__title">Objetivo General</h3>
+            <p class="card__sub">
+              Comprender los principios, arquitecturas y tecnologías de los sistemas distribuidos para diseñar 
+              aplicaciones escalables y tolerantes a fallos, aplicando mecanismos de comunicación, coordinación 
+              y replicación en entornos distribuidos.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__badge card__badge--secondary">Específicos</div>
+            <h3 class="card__title">Objetivos Específicos</h3>
+            <ul class="list">
+              <li>Implementar mecanismos de comunicación entre procesos (RPC, mensajería) y sincronización distribuida (relojes lógicos, algoritmos de exclusión mutua).</li>
+              <li>Analizar modelos de consistencia y técnicas de replicación de datos en sistemas distribuidos.</li>
+              <li>Diseñar soluciones tolerantes a fallos aplicando patrones de disponibilidad y recuperación (checkpointing, consenso distribuido).</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout">
+          <div class="callout__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <div class="callout__body">
+            <strong>Enfoque práctico:</strong> cada tema se acompaña de una actividad (foro, quiz, taller o proyecto)
+            para aterrizar conceptos y reforzar el aprendizaje con ejercicios aplicados.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+    <!-- PANEL: RUTA -->
+    <section class="main-tab-panel" id="panel-ruta" role="tabpanel" aria-labelledby="tab-ruta" hidden>
+      <section class="section" id="ruta" aria-labelledby="rutaTitle">
+      <div class="container">
+        <div class="section__hd">
+          <h2 id="rutaTitle">Ruta de Aprendizaje</h2>
+          <p class="muted">
+            16 semanas de contenido estructurado. Marca cada semana como completada para ver tu avance
+            y desbloquear insignias.
+          </p>
+        </div>
+
+        <div class="filters" role="toolbar" aria-label="Filtrar actividades por tipo">
+          <button class="btn btn--chip is-active" type="button" data-filter="all" aria-pressed="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            Todo
+          </button>
+          <button class="btn btn--chip" type="button" data-filter="foro" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Foros
+          </button>
+          <button class="btn btn--chip" type="button" data-filter="taller" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+            Talleres
+          </button>
+          <button class="btn btn--chip" type="button" data-filter="quiz" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Quizzes
+          </button>
+          <button class="btn btn--chip" type="button" data-filter="parcial" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Parciales
+          </button>
+          <button class="btn btn--chip" type="button" data-filter="proyecto" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+            Proyecto
+          </button>
+        </div>
+
+        <div class="accordion" id="sessions" role="region" aria-label="Listado de semanas del curso"></div>
+        <!-- NOTA: El parcial de la semana 15 y la certificación de la semana 14 deben estar reflejados en los datos de las sesiones y en los tags/filtrado. Si no aparecen, deben agregarse en window.__COURSE_DATA__ o en el renderizado JS. -->
+
+        <!-- GAMIFICACIÓN: INSIGNIAS -->
+        <div class="badges-section" aria-label="Sistema de insignias">
+          <h3 class="badges__title">Insignias de logro</h3>
+          <p class="badges__desc">Completa las semanas indicadas para desbloquear cada insignia.</p>
+          
+          <div class="badge-row">
+            <div class="badge" id="badgeLineales" aria-live="polite">
+              <div class="badge__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="badge__content">
+                <span class="badge__txt">Arquitecturas Distribuidas</span>
+                <span class="badge__small">Semanas 1-7: Cliente-Servidor, P2P y Microservicios</span>
+              </div>
+              <div class="badge__status">
+                <span class="badge__dot" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="badge" id="badgeNoLineales" aria-live="polite">
+              <div class="badge__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="badge__content">
+                <span class="badge__txt">Comunicación y Sincronización</span>
+                <span class="badge__small">Semanas 8-13: RPC, Mensajería y Relojes Lógicos</span>
+              </div>
+              <div class="badge__status">
+                <span class="badge__dot" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="badge" id="badgeFinal" aria-live="polite">
+              <div class="badge__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div class="badge__content">
+                <span class="badge__txt">Tolerancia a Fallos</span>
+                <span class="badge__small">Semanas 14-16: Replicación, Consenso y Cloud</span>
+              </div>
+              <div class="badge__status">
+                <span class="badge__dot" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
+
+
+    <!-- PANEL: EVALUACIÓN -->
+    <section class="main-tab-panel" id="panel-eval" role="tabpanel" aria-labelledby="tab-eval" hidden>
+      <section class="section" id="evaluacion" aria-labelledby="evalTitle">
+        <div class="container">
+          <div class="section__hd">
+            <h2 id="evalTitle">Acuerdos Pedagógicos y Momentos de Evaluación</h2>
+            <p class="muted">
+              La evaluación se distribuye en tres cortes académicos, cada uno con momentos y porcentajes definidos. No se detallan actividades específicas, solo los acuerdos y porcentajes.
+            </p>
+          </div>
+
+
+          <!-- Tabla integrada de evaluación -->
+          <div class="eval-block">
+            <table class="eval-table">
+              <thead>
+                <tr>
+                  <th>Corte</th>
+                  <th>Momento</th>
+                  <th>Porcentaje</th>
+                  <th>Fechas clave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Primer Corte -->
+                <tr class="corte-row">
+                  <td rowspan="4"><strong>Primer Corte</strong><br><span class="eval-block__periodo">(02-feb-2026 a 14-mar-2026)</span></td>
+                  <td>AUTOEVALUACIÓN</td><td>2%</td>
+                  <td rowspan="4"><strong>Parcial:</strong> 04-mar-2026<br><strong>Socialización:</strong> 11-mar-2026<br><span style="color:var(--brand-green-dark)">Primer reporte de notas (30%)</span></td>
+                </tr>
+                <tr><td>COEVALUACIÓN</td><td>3%</td></tr>
+                <tr><td>HETEROEVALUACIÓN</td><td>25%</td></tr>
+                <tr><td>Parcial</td><td>70%</td></tr>
+
+                <!-- Segundo Corte -->
+                <tr class="corte-row">
+                  <td rowspan="4"><strong>Segundo Corte</strong><br><span class="eval-block__periodo">(14-mar-2026 a 25-abr-2026)</span></td>
+                  <td>AUTOEVALUACIÓN</td><td>2%</td>
+                  <td rowspan="4"><strong>Parcial:</strong> 15-abr-2026<br><strong>Socialización:</strong> 22-abr-2026<br><span style="color:var(--brand-green-dark)">Segundo reporte de notas (30%)</span></td>
+                </tr>
+                <tr><td>COEVALUACIÓN</td><td>3%</td></tr>
+                <tr><td>HETEROEVALUACIÓN</td><td>25%</td></tr>
+                <tr><td>Examen – Parcial</td><td>70%</td></tr>
+
+                <!-- Tercer Corte -->
+                <tr class="corte-row">
+                  <td rowspan="6"><strong>Tercer Corte</strong><br><span class="eval-block__periodo">(25-abr-2026 a 30-may-2026)</span></td>
+                  <td>AUTOEVALUACIÓN</td><td>2%</td>
+                  <td rowspan="6"><strong>Parcial:</strong> 20-may-2026<br><strong>Socialización:</strong> 27-may-2026<br><span style="color:var(--brand-green-dark)">Tercer corte o reporte de notas (40%)</span><br><strong>Nota:</strong> El Examen – Parcial corresponde al parcial de la semana 15.</td>
+                </tr>
+                <tr><td>COEVALUACIÓN</td><td>3%</td></tr>
+                <tr><td>HETEROEVALUACIÓN</td><td>15%</td></tr>
+                <tr><td>Proyecto Final</td><td>10%</td></tr>
+                <tr><td>Certificación</td><td>10%</td></tr>
+                <tr><td>Examen – Parcial</td><td>50%</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout">
+            <div class="callout__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <div class="callout__body">
+              <strong>Nota:</strong> Los porcentajes y momentos de evaluación están sujetos a los acuerdos pedagógicos institucionales y pueden ser ajustados según lineamientos de la facultad.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- PANEL: RECURSOS -->
+    <section class="main-tab-panel" id="panel-rec" role="tabpanel" aria-labelledby="tab-rec" hidden>
+      <section class="section section--alt" id="recursos" aria-labelledby="recTitle">
+      <div class="container">
+        <div class="section__hd">
+          <h2 id="recTitle">Recursos de Apoyo</h2>
+          <p class="muted">Bibliografía institucional y material complementario para profundizar en cada tema.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Biblioteca Digital CORHUILA</h3>
+            <p class="card__sub">Recursos disponibles en la plataforma institucional.</p>
+            
+            <details class="details">
+              <summary>Ver bibliografía institucional (3 títulos)</summary>
+              <ul class="refs">
+                <li>
+                  <strong>Tanenbaum, A. S., & Van Steen, M. (2017).</strong> <em>Sistemas distribuidos: principios y paradigmas.</em> Pearson Educación.<br/>
+                  <span class="muted">Referencia clásica y fundamental sobre arquitecturas y mecanismos de sistemas distribuidos.</span>
+                </li>
+                <li>
+                  <strong>Coulouris, G., Dollimore, J., Kindberg, T., & Blair, G. (2011).</strong> <em>Distributed Systems: Concepts and Design.</em> Addison-Wesley.<br/>
+                  <span class="muted">Guía completa de conceptos, algoritmos y casos de estudio en sistemas distribuidos.</span>
+                </li>
+                <li>
+                  <strong>Kleppmann, M. (2017).</strong> <em>Designing Data-Intensive Applications.</em> O'Reilly Media.<br/>
+                  <span class="muted">Diseño de aplicaciones distribuidas con enfoque en consistencia, replicación y escalabilidad.</span>
+                </li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Bibliografía Complementaria</h3>
+            <p class="card__sub">Recursos externos recomendados para ampliar conocimientos.</p>
+            
+            <details class="details">
+              <summary>Ver bibliografía complementaria (3 títulos)</summary>
+              <ul class="refs">
+                <li>
+                  <strong>Brendan Burns et al. (2018).</strong> <em>Kubernetes: Up and Running.</em> O'Reilly Media.
+                </li>
+                <li>
+                  <strong>Newman, S. (2021).</strong> <em>Building Microservices: Designing Fine-Grained Systems.</em> O'Reilly Media.
+                </li>
+                <li>
+                  <strong>Richardson, C. (2018).</strong> <em>Microservices Patterns.</em> Manning Publications.
+                </li>
+              </ul>
+            </details>
+          </article>
+        </div>
+
+        <div class="resources-extra">
+          <h3>Recursos interactivos sobre Sistemas Distribuidos</h3>
+          <div class="resource-cards">
+            <a href="https://www.coursera.org/learn/cloud-computing" target="_blank" rel="noopener" class="resource-card">
+              <div class="resource-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="3" y1="9" x2="21" y2="9"/>
+                  <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+              </div>
+              <div class="resource-card__content">
+                <strong>Coursera: Cloud Computing Concepts</strong>
+                <span>Curso gratuito de la Universidad de Illinois sobre fundamentos de computación distribuida en la nube.</span>
+              </div>
+            </a>
+            <a href="https://martin.kleppmann.com/" target="_blank" rel="noopener" class="resource-card">
+              <div class="resource-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </div>
+              <div class="resource-card__content">
+                <strong>Martin Kleppmann Blog</strong>
+                <span>Artículos y charlas del autor de "Designing Data-Intensive Applications" sobre sistemas distribuidos.</span>
+              </div>
+            </a>
+            <a href="https://www.microsoft.com/en-us/research/people/lamport/" target="_blank" rel="noopener" class="resource-card">
+              <div class="resource-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="resource-card__content">
+                <strong>Leslie Lamport - Microsoft Research</strong>
+                <span>Papers fundamentales de sistemas distribuidos: Paxos, relojes lógicos, byzantína tolerancia.</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="footnote">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4M12 8h.01"/>
+          </svg>
+          <span>Esta OVA está diseñada para uso académico institucional. Todos los derechos de los materiales bibliográficos pertenecen a sus respectivos autores y editoriales.</span>
+        </div>
+      </div>
+    </section>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="src/img/corhuila-logo.png" alt="" width="40" height="34" loading="lazy" />
+        <div>
+          <div class="footer__title">CORHUILA · Ingeniería de Sistemas</div>
+          <div class="footer__small">OVA · Sistemas Distribuidos · Versión 2.0</div>
+        </div>
+      </div>
+      <div class="footer__info">
+        <div class="footer__small">
+          Objeto Virtual de Aprendizaje — Funciona completamente offline
+        </div>
+        <div class="footer__small">
+          Programa: Ingeniería de Sistemas · Facultad de Ingeniería
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NO JAVASCRIPT WARNING -->
+  <noscript>
+    <div class="noscript" role="alert">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      <span>Esta OVA requiere JavaScript para mostrar las interacciones (acordeones, quiz y progreso).</span>
+    </div>
+  </noscript>
+
+  <!-- ========== DATA ========== -->
+  <script>
+    window.__COURSE_DATA__ = {
+      "meta": {
+        "facultad": "Ingeniería",
+        "programa": "Ingeniería de Sistemas",
+        "curso": "Sistemas Distribuidos",
+        "codigo": "84719",
+        "creditos": "3",
+        "modalidad": "Presencial",
+        "semestre": "VII",
+        "horas": {
+          "acompanamiento": 48,
+          "autonoma": 96,
+          "total": 144
+        },
+        "metodologia": "Teórico-Práctico",
+        "periodo": "I",
+        "nivel": "Pregrado"
+      },
+      "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+      "sessions": [
+        {
+          "semana": 1,
+          "tema": "Introducción a sistemas distribuidos",
+          "acompanamiento": "Presentación del curso, definición, características y ejemplos de sistemas distribuidos modernos",
+          "h_acomp": 3,
+          "autonoma": "Foro: Identificar sistemas distribuidos en uso cotidiano y analizar sus ventajas/desventajas",
+          "h_auto": 6
+        },
+        {
+          "semana": 2,
+          "tema": "Modelos arquitectónicos: Cliente-Servidor",
+          "acompanamiento": "Exposición sobre arquitectura cliente-servidor, protocolos HTTP/HTTPS, REST APIs",
+          "h_acomp": 3,
+          "autonoma": "Taller: Implementación de servidor HTTP básico con manejo de peticiones concurrentes",
+          "h_auto": 6
+        },
+        {
+          "semana": 3,
+          "tema": "Arquitecturas Peer-to-Peer y Microservicios",
+          "acompanamiento": "Desarrollo temático: P2P, arquitecturas de microservicios, ventajas y casos de uso",
+          "h_acomp": 3,
+          "autonoma": "Taller: Diseño de aplicación con arquitectura de microservicios y comunicación entre servicios",
+          "h_auto": 6
+        },
+        {
+          "semana": 4,
+          "tema": "Comunicación entre procesos (IPC)",
+          "acompanamiento": "Explicación guiada sobre sockets, RPC (Remote Procedure Call) y mensajería",
+          "h_acomp": 3,
+          "autonoma": "Quiz: Conceptos de comunicación sincrónica vs asincrónica, RPC y mensajería",
+          "h_auto": 6
+        },
+        {
+          "semana": 5,
+          "tema": "Primer Parcial",
+          "acompanamiento": "Evaluación teórico-práctica del primer corte: arquitecturas y comunicación",
+          "h_acomp": 3,
+          "autonoma": "Parcial: Revisión individual de resultados y análisis de errores",
+          "h_auto": 6
+        },
+        {
+          "semana": 6,
+          "tema": "Sincronización: Relojes lógicos y físicos",
+          "acompanamiento": "Exposición sobre sincronización de relojes, algoritmos de Lamport y vectoriales",
+          "h_acomp": 3,
+          "autonoma": "Foro: Problemas de sincronización en sistemas distribuidos y soluciones propuestas",
+          "h_auto": 6
+        },
+        {
+          "semana": 7,
+          "tema": "Coordinación distribuida",
+          "acompanamiento": "Desarrollo temático: Exclusión mutua distribuida, algoritmos de elección de líder",
+          "h_acomp": 3,
+          "autonoma": "Taller: Implementación de algoritmo de exclusión mutua (Ricart-Agrawala o similar)",
+          "h_auto": 6
+        },
+        {
+          "semana": 8,
+          "tema": "Transacciones distribuidas",
+          "acompanamiento": "Clase sobre ACID en sistemas distribuidos, commit de dos fases (2PC), Paxos básico",
+          "h_acomp": 3,
+          "autonoma": "Taller: Simulación de protocolo 2PC para garantizar consistencia en transacciones",
+          "h_auto": 6
+        },
+        {
+          "semana": 9,
+          "tema": "Consistencia y replicación",
+          "acompanamiento": "Presentación de modelos de consistencia (fuerte, eventual, causal) y replicación de datos",
+          "h_acomp": 3,
+          "autonoma": "Quiz: Teorema CAP, modelos de consistencia y trade-offs en sistemas distribuidos",
+          "h_auto": 6
+        },
+        {
+          "semana": 10,
+          "tema": "Segundo Parcial",
+          "acompanamiento": "Evaluación teórico-práctica del segundo corte: sincronización, coordinación y consistencia",
+          "h_acomp": 3,
+          "autonoma": "Parcial: Revisión comparativa con rúbrica y discusión de resultados",
+          "h_auto": 6
+        },
+        {
+          "semana": 11,
+          "tema": "Tolerancia a fallos: Detección y recuperación",
+          "acompanamiento": "Desarrollo temático: Tipos de fallos, detección de fallos, checkpointing y rollback",
+          "h_acomp": 3,
+          "autonoma": "Foro: Estrategias de recuperación ante fallos en sistemas críticos (financieros, salud)",
+          "h_auto": 6
+        },
+        {
+          "semana": 12,
+          "tema": "Consenso distribuido",
+          "acompanamiento": "Exposición sobre algoritmos de consenso: Paxos, Raft y aplicaciones en sistemas reales",
+          "h_acomp": 3,
+          "autonoma": "Taller: Análisis y simulación de algoritmo de consenso Raft",
+          "h_auto": 6
+        },
+        {
+          "semana": 13,
+          "tema": "Sistemas de archivos distribuidos",
+          "acompanamiento": "Explicación de DFS (NFS, HDFS, GFS), replicación y tolerancia a fallos en almacenamiento",
+          "h_acomp": 3,
+          "autonoma": "Taller: Configuración y pruebas de sistema de archivos distribuido (HDFS o NFS)",
+          "h_auto": 6
+        },
+        {
+          "semana": 14,
+          "tema": "Computación en la nube y Certificación",
+          "acompanamiento": "Clase sobre modelos de nube (IaaS, PaaS, SaaS), virtualización y orquestación. Entrega de certificación.",
+          "h_acomp": 3,
+          "autonoma": "Quiz: Conceptos de virtualización, contenedores y orquestación (Docker, Kubernetes). Entrega certificación.",
+          "h_auto": 6
+        },
+        {
+          "semana": 15,
+          "tema": "Proyecto final integrador y Tercer Parcial",
+          "acompanamiento": "Presentación de proyectos: sistema distribuido con múltiples componentes. Aplicación del Tercer Parcial.",
+          "h_acomp": 3,
+          "autonoma": "Proyecto: Entrega de proyecto final y documentación técnica. Parcial 3: Evaluación teórico-práctica final.",
+          "h_auto": 6
+        },
+        {
+          "semana": 16,
+          "tema": "Retroalimentación y cierre del curso",
+          "acompanamiento": "Asesoría final, revisión de notas, retroalimentación y proceso de cierre",
+          "h_acomp": 3,
+          "autonoma": "Proyecto: Ajustes finales al proyecto y reflexión individual sobre el aprendizaje",
+          "h_auto": 6
+        }
+      ],
+      "evaluation": {
+        "Primer corte": [
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Participación en foros, talleres de cliente-servidor y microservicios, quiz de IPC.",
+            "estrategia": "AUTOEVALUACIÓN",
+            "tecnicas": "Cuestionario de autorreflexión sobre comprensión de arquitecturas distribuidas",
+            "momento": "Primer corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Retroalimentación entre pares en talleres de implementación.",
+            "estrategia": "COEVALUACIÓN",
+            "tecnicas": "Rúbrica de evaluación entre compañeros en diseño de arquitecturas",
+            "momento": "Primer corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Primer parcial escrito, entrega de talleres individuales y grupales.",
+            "estrategia": "HETEROEVALUACIÓN",
+            "tecnicas": "Parcial teórico-práctico, rúbrica de talleres, participación en clase",
+            "momento": "Primer corte",
+            "porcentaje": "20%"
+          }
+        ],
+        "Segundo corte": [
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Participación en foros, talleres de sincronización y transacciones, quiz de consistencia.",
+            "estrategia": "AUTOEVALUACIÓN",
+            "tecnicas": "Cuestionario de autorreflexión sobre comprensión de coordinación distribuida",
+            "momento": "Segundo corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Retroalimentación entre pares en implementaciones de algoritmos distribuidos.",
+            "estrategia": "COEVALUACIÓN",
+            "tecnicas": "Revisión de código entre compañeros con checklist de calidad",
+            "momento": "Segundo corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Segundo parcial, talleres de implementación, quizzes en línea.",
+            "estrategia": "HETEROEVALUACIÓN",
+            "tecnicas": "Parcial teórico-práctico, evaluación de código funcional, sustentación",
+            "momento": "Segundo corte",
+            "porcentaje": "20%"
+          }
+        ],
+        "Tercer corte": [
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Reflexión sobre el proyecto final distribuido y proceso de desarrollo.",
+            "estrategia": "AUTOEVALUACIÓN",
+            "tecnicas": "Informe de autoevaluación del proyecto y aprendizajes adquiridos",
+            "momento": "Tercer corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Evaluación del trabajo en equipo y contribuciones individuales al proyecto.",
+            "estrategia": "COEVALUACIÓN",
+            "tecnicas": "Rúbrica de evaluación grupal y distribución equitativa del trabajo",
+            "momento": "Tercer corte",
+            "porcentaje": "5%"
+          },
+          {
+            "raa": "Diseña y evalúa soluciones basadas en sistemas distribuidos aplicando principios de comunicación, sincronización, consistencia y tolerancia a fallos.",
+            "evidencias": "Proyecto final integrador, documentación técnica, sustentación oral.",
+            "estrategia": "HETEROEVALUACIÓN",
+            "tecnicas": "Rúbrica de proyecto (funcionalidad, código, documentación, presentación)",
+            "momento": "Tercer corte",
+            "porcentaje": "30%"
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "t": "¿Cuál de las siguientes características es fundamental en un sistema distribuido?",
+          "opts": ["Toda la información en un servidor central", "Transparencia de ubicación", "No requiere comunicación entre nodos", "Sin sincronización de datos"],
+          "ok": 1,
+          "tip": "La transparencia de ubicación permite acceder a recursos sin conocer su ubicación física.",
+          "week": 1
+        },
+        {
+          "id": "q2",
+          "t": "¿Qué protocolo garantiza la entrega ordenada y confiable de mensajes?",
+          "opts": ["UDP", "HTTP", "TCP", "ICMP"],
+          "ok": 2,
+          "tip": "TCP proporciona entrega ordenada y confiable mediante confirmaciones y retransmisiones.",
+          "week": 4
+        },
+        {
+          "id": "q3",
+          "t": "¿Qué establece el teorema CAP en sistemas distribuidos?",
+          "opts": ["Garantiza las 3 propiedades siempre", "Solo 2 de 3: Consistencia, Disponibilidad, Tolerancia", "Consistencia > Disponibilidad siempre", "No tolera particiones de red"],
+          "ok": 1,
+          "tip": "El teorema CAP (Eric Brewer) dice que en presencia de particiones solo se garantizan 2 de 3 propiedades.",
+          "week": 9
+        },
+        {
+          "id": "q4",
+          "t": "¿Cuál es el propósito de los relojes lógicos de Lamport?",
+          "opts": ["Sincronizar tiempo físico", "Establecer orden causal de eventos", "Medir rendimiento", "Detectar fallos hardware"],
+          "ok": 1,
+          "tip": "Los relojes de Lamport establecen un orden parcial que respeta la causalidad entre eventos.",
+          "week": 6
+        },
+        {
+          "id": "q5",
+          "t": "¿Qué algoritmo usa líderes electos y términos para consenso distribuido?",
+          "opts": ["Two-Phase Commit (2PC)", "Byzantine Fault Tolerance", "Raft", "Gossip protocol"],
+          "ok": 2,
+          "tip": "Raft utiliza elección de líderes y términos para lograr consenso de manera comprensible.",
+          "week": 12
+        }
+      ]
+    };
+  </script>
+  <script src="src/js/lib/tiny.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
+</html>
