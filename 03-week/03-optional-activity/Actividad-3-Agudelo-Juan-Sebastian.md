@@ -126,33 +126,7 @@ El modelo event-driven podría implementarse más adelante para notificaciones, 
 
 ---
 
-## 4. Exposición corta (Guion de 5 minutos)  
-
-### Patrón: Microservicios
-
-**Definición:**  
-Arquitectura donde la aplicación se divide en servicios pequeños, independientes y especializados.
-
-**Características:**
-- Servicios autónomos.
-- Comunicación mediante APIs.
-- Despliegue independiente.
-- Base de datos por servicio.
-
-**Ventajas:**
-- Escalabilidad por servicio.
-- Flexibilidad tecnológica.
-- Mayor mantenibilidad en sistemas grandes.
-
-**Desventajas:**
-- Complejidad en la comunicación.
-- Necesidad de infraestructura adicional.
-- Mayor dificultad de monitoreo.
-
-**Caso real:**  
-Amazon utiliza microservicios para separar pagos, envíos, catálogo y recomendaciones, permitiendo escalar cada parte según la demanda.
-
----
+## 4. Exposición corta (Pdf adjunto)
 
 ## 5. Reflexión crítica  
 
